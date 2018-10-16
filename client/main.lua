@@ -26,8 +26,6 @@ local DriveErrors       = 0
 local IsAboveSpeedLimit = false
 local LastVehicleHealth = nil
 
---local _source = source
---local xPlayer = ESX.GetPlayerFromId(_source)
 local i = true
 
 Citizen.CreateThread(function()
