@@ -111,6 +111,7 @@ function SetCurrentZoneType(type)
 CurrentZoneType = type
 end
 
+------------------------ AnchorIN 1
 function OpenDMVSchoolMenu()
 	local ownedLicenses = {}
 
@@ -148,7 +149,7 @@ function OpenDMVSchoolMenu()
 		elements = elements,
 		align    = 'top-left',
 	}, function(data, menu)
-------------------------
+    ------------------------ Start Theory Test Function + Check Cash Balance
 		if data.current.value == 'theory_test' then
 			menu.close()
       TriggerServerEvent('esx_dmvschool:checkBalance', Config.Prices['dmv'], i)
@@ -158,7 +159,7 @@ function OpenDMVSchoolMenu()
         ESX.ShowNotification(_U('no_money')) --U broke bro
       end
 		end
-------------------------
+    ------------------------ Start Driving Test Function + Check Cash Balance
 		if data.current.value == 'drive_test' then
 			menu.close()
       TriggerServerEvent('esx_dmvschool:checkBalance', Config.Prices[type], i)
@@ -168,7 +169,7 @@ function OpenDMVSchoolMenu()
         ESX.ShowNotification(_U('no_money')) --U broke bro
       end
 		end
-------------------------
+    ------------------------ End Starting tests
 		end, function(data, menu)
 			menu.close()
 
@@ -178,6 +179,7 @@ function OpenDMVSchoolMenu()
 		end
 	)
 end
+------------------------ AnchorOUT 1
 
 RegisterNUICallback('question', function(data, cb)
 	SendNUIMessage({
@@ -426,3 +428,4 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
+------------------------ End of Script

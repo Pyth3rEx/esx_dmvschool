@@ -18,7 +18,7 @@ AddEventHandler('esx_dmvschool:addLicense', function(type)
 		end)
 	end)
 end)
-------------------------
+------------------------ Checks DB for Cash Money, return boolean
 RegisterNetEvent('esx_dmvschool:checkBalance')
 AddEventHandler('esx_dmvschool:checkBalance', function(price, i)
   local _source = source
@@ -33,7 +33,7 @@ AddEventHandler('esx_dmvschool:checkBalance', function(price, i)
     return i
   end
 end)
-------------------------
+------------------------ Pays the School
 RegisterNetEvent('esx_dmvschool:pay')
 AddEventHandler('esx_dmvschool:pay', function(price)
 	local _source = source
@@ -42,3 +42,4 @@ AddEventHandler('esx_dmvschool:pay', function(price)
 	xPlayer.removeMoney(price)
 	TriggerClientEvent('esx:showNotification', _source, _U('you_paid', price))
 end)
+------------------------ End of Script
