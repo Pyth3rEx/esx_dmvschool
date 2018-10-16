@@ -44,10 +44,6 @@ git clone https://github.com/ESX-Org/esx_dmvschool [esx]/esx_dmvschool
 ***
 
 -Add the below in your server.cfg, if you are confused just add it below the others `start esx-nameOfRessource` </p>
-`start esx_dmvschool`
-***
-
-
 ```
 start esx_dmvschool
 ```
