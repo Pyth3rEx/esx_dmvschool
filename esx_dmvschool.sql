@@ -1,4 +1,4 @@
-USE `essentialmode`;
+USE `DATABASENAME`;
 
 INSERT INTO `licenses` (`type`, `label`) VALUES
 	('dmv', 'Code de la route'),
