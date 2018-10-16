@@ -26,6 +26,10 @@ local DriveErrors       = 0
 local IsAboveSpeedLimit = false
 local LastVehicleHealth = nil
 
+--local _source = source
+--local xPlayer = ESX.GetPlayerFromId(_source)
+local i = true
+
 Citizen.CreateThread(function()
 	while ESX == nil do
 		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
@@ -70,6 +74,7 @@ function StopTheoryTest(success)
 		ESX.ShowNotification(_U('failed_test'))
 	end
 end
+
 
 function StartDriveTest(type)
 	ESX.Game.SpawnVehicle(Config.VehicleModels[type], Config.Zones.VehicleSpawnPoint.Pos, Config.Zones.VehicleSpawnPoint.Pos.h, function(vehicle)
@@ -143,16 +148,27 @@ function OpenDMVSchoolMenu()
 		elements = elements,
 		align    = 'top-left',
 	}, function(data, menu)
+------------------------
 		if data.current.value == 'theory_test' then
 			menu.close()
-			StartTheoryTest()
+      TriggerServerEvent('esx_dmvschool:checkBalance', Config.Prices['dmv'], i)
+      if i ~= true then --checks if user has enough cash
+			  StartTheoryTest()
+      else
+        ESX.ShowNotification(_U('no_money')) --U broke bro
+      end
 		end
-
+------------------------
 		if data.current.value == 'drive_test' then
 			menu.close()
-			StartDriveTest(data.current.type)
+      TriggerServerEvent('esx_dmvschool:checkBalance', Config.Prices[type], i)
+      if i ~= true then --checks if user has enough cash
+			  StartDriveTest(data.current.type)
+      else
+        ESX.ShowNotification(_U('no_money')) --U broke bro
+      end
 		end
-
+------------------------
 		end, function(data, menu)
 			menu.close()
 

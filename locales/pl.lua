@@ -13,6 +13,7 @@ Locales['pl'] = {
   ['gratz_stay_alert'] = 'jestem pod wrażeniem, ale nie zapomnij się zatrzymać  ~r~alert~s~ podczas jazdy!',
   ['passed_test'] = '~g~Zdałeś~s~ egzamin, gratulacje!',
   ['failed_test'] = '~r~Oblałeś~s~ egzamin, powodzenia następnym razem!',
+  ['no_money'] = "You don't have ~r~enouh cash~s~!",
   ['theory_test'] = 'ezgamin Teoretyczny',
   ['road_test_car'] = 'egzamin praktyczny kat. B',
   ['road_test_bike'] = 'egzamin praktyczny kat. A',

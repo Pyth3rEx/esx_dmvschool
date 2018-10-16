@@ -13,6 +13,7 @@ Locales['sv'] = {
   ['gratz_stay_alert'] = 'jag är imponerad, glöm inte vara ~r~pigg~s~ när du kör!',
   ['passed_test'] = 'du ~g~passerade~s~ provet, gratulerar!',
   ['failed_test'] = 'du ~r~kuggade~s~ provet, bättre lycka nästa gång',
+  ['no_money'] = "You don't have ~r~enouh cash~s~!",
   ['theory_test'] = 'teoretiskt körningsprov',
   ['road_test_car'] = 'B-körkort (personbil)',
   ['road_test_bike'] = 'A-körkort (motorcykel)',

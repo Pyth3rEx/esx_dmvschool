@@ -13,6 +13,7 @@ Locales['fr'] = {
   ['gratz_stay_alert'] = 'bravo, restez vigiliant!',
   ['passed_test'] = 'vous avez ~g~réussi~s~ le test',
   ['failed_test'] = 'vous avez ~r~raté~s~ le test',
+  ['no_money'] = "vous n'avez pas asser de ~r~cash~s~!",
   ['theory_test'] = 'examen du code',
   ['road_test_car'] = 'examen de conduite [voiture]',
   ['road_test_bike'] = 'examen de conduite [moto]',

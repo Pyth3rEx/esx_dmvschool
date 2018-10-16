@@ -18,7 +18,22 @@ AddEventHandler('esx_dmvschool:addLicense', function(type)
 		end)
 	end)
 end)
+------------------------
+RegisterNetEvent('esx_dmvschool:checkBalance')
+AddEventHandler('esx_dmvschool:checkBalance', function(price, i)
+  local _source = source
+	local xPlayer = ESX.GetPlayerFromId(_source)
+  local cash = xPlayer.getMoney()
 
+  if cash >= price then
+    i = true
+    return i
+  else
+    i = false
+    return i
+  end
+end)
+------------------------
 RegisterNetEvent('esx_dmvschool:pay')
 AddEventHandler('esx_dmvschool:pay', function(price)
 	local _source = source
