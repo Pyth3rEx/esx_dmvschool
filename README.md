@@ -18,12 +18,35 @@ git clone https://github.com/ESX-Org/esx_dmvschool [esx]/esx_dmvschool
 ```
 
 ### Manually
-- Download https://github.com/ESX-Org/esx_dmvschool/archive/master.zip
-- Put it in the `[esx]` directory
+-Download the latest [release](https://github.com/Pyth3rEx/esx_dmvschool/releases)</p>
+***
 
-## Installation
-- Import `esx_dmvschool.sql` in your database
-- Add this in your `server.cfg`:
+-Unzip /esx_dmvschool in /[ESX] as shown below: (_ are non-necessary files/folder)</p>
+```
+- server-data
+ - resources
+  - [ESX]
+   - esx-dmvschool
+    - client
+    - html
+    - locales
+    - localization
+    - server
+    _ LICENSE
+    _ README.md
+    - _ressource.lua
+    - config.lua
+    _ esx_dvmschool.sql
+```
+***
+
+-Import `/esx_dmvschool.sql` to your database, make sure to change `DATABASENAME` to your database's name. Should be "EssentialMode" in most cases.</p>
+***
+
+-Add the below in your server.cfg, if you are confused just add it below the others `start esx-nameOfRessource` </p>
+`start esx_dmvschool`
+***
+
 
 ```
 start esx_dmvschool
@@ -33,7 +56,10 @@ start esx_dmvschool
 ### License
 esx_dmvschool - realistic DMV school for ESX
 
-Copyright (C) 2015-2018 Jérémie N'gadi
+Original by: Jérémie N'gadi
+Modfied by: Pyth3rEx
+
+Copyright (C) 2018 Pyth3rEx
 
 This program Is free software: you can redistribute it And/Or modify it under the terms Of the GNU General Public License As published by the Free Software Foundation, either version 3 Of the License, Or (at your option) any later version.
 
