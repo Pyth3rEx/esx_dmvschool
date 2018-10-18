@@ -151,7 +151,7 @@ function OpenDMVSchoolMenu()
 		if data.current.value == 'theory_test' then
 			menu.close()
       TriggerServerEvent('esx_dmvschool:checkBalance', Config.Prices['dmv'], i)
-      if i ~= true then --checks if user has enough cash
+      if i == true then --checks if user has enough cash
 			  StartTheoryTest()
       else
         ESX.ShowNotification(_U('no_money')) --U broke bro
@@ -161,7 +161,7 @@ function OpenDMVSchoolMenu()
 		if data.current.value == 'drive_test' then
 			menu.close()
       TriggerServerEvent('esx_dmvschool:checkBalance', Config.Prices[type], i)
-      if i ~= true then --checks if user has enough cash
+      if i == true then --checks if user has enough cash
 			  StartDriveTest(data.current.type)
       else
         ESX.ShowNotification(_U('no_money')) --U broke bro
